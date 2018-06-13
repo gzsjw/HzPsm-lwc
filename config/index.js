@@ -34,6 +34,14 @@ module.exports = {
         pathRewrite: {
           '^/useravatar': '/static/useravatar'
         }
+      },
+      // proxy servlet starting with /servlet to nc
+      '/servlet': {
+        target: 'http://10.1.255.76:8186',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/servlet': '/servlet'
+        }
       }
     },
 

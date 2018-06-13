@@ -1,3 +1,6 @@
+// import apiurl from './apiurl'
+import apiurl from './apiurl_demo'
+
 export default {
   DebugMode: true,
   busiCenterCode: '01',
@@ -8,9 +11,7 @@ export default {
   devOrgName: '广州翰智软件',
   groupName: '翰智集团',
 
-  ApiUrlList: {
-    SYSTEM_LOGIN: '/system/hzpsm/login'
-  },
+  ApiUrlList: apiurl,
 
   FuncNodeList: {
     FuncNode01: 'FuncNode01',

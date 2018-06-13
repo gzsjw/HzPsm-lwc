@@ -5,6 +5,8 @@ export default {
   login (loginData, succeed, fail) {
     // 登录用户，授权节点
     const url = config.ApiUrlList.SYSTEM_LOGIN
+    loginData.busiCenterCode = config.busiCenterCode
+    loginData.isSingleLogin = false
     axios({ method: 'post', url: url, data: loginData })
       .then(response => {
         const loginresponse = response.data
